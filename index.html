@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = [];
+        function Add(){
+            var x =Number( document.getElementById('in1').value);
+            arr.push(x);
+            document.getElementById('in1').value=" ";
+            window.alert("the item add sucess")
+
+        }
+        function display(){
+            var output = " ";
+            for(var i=0;i<arr.length;i++){
+               output += "Element" +i+"="+ arr[i]+'<br>';
+            }
+            document.getElementById('h1').innerHTML= output; 
+        }
+    </script>
+</head>
+<body>
+    plase inter numper
+    <input type="text" id="in1">
+    <button type="button" id="btn1" onclick="Add()">Add </button>
+    <button type="button" id="btn2" onclick="display()">display</button>
+    <h1 id="h1" style="color: blue;"></h1>
+
+
+</body>
+</html>
